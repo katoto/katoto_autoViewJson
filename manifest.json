@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "name": "fast-change",
+    "version": "1.0",
+    "description": "auto change static config",
+    "browser_action": {
+        "default_icon": "cc.gif",
+        "default_title": "Hello fast",
+        "default_popup": "popup.html" //单击图标执行的文件
+    },
+    "permissions": [ //允许插件访问的url
+        "http://*/",
+        "bookmarks",
+        "tabs",
+        "history"
+    ],
+    "background": { //background script即插件运行的环境
+        "page": "background.html"
+        // "scripts": ["js/jquery-1.9.1.min.js","js/background.js"]//数组.chrome会在扩展启动时自动创建一个包含所有指定脚本的页面
+    },
+    "content_scripts": [
+        { //对页面内容进行操作的脚本
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ], //满足什么条件执行该插件 
+            "js": [
+                "js/jquery-1.9.1.min.js",
+                "js/js.js"
+            ],
+            "run_at": "document_start", //在document加载时执行该脚本
+            "all_frames": true
+        }
+    ]
+}

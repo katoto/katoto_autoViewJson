@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <style>
+        body {
+            font-family: "微软雅黑";
+        }
+
+        .btn {
+            margin: 10px;
+            width: 200px;
+            line-height: 35px;
+            background: #3AB2FF;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .btn:active {
+            background: #3AB2aa;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>下面黏贴静态配置：</h3>
+        <textarea name="staticJson" cols="30" rows="10" id="inpJson"></textarea>
+    </div>
+    <button id="startEdit">确定，开始编辑</button>
+    <button class="btn">更新的json</button><br>
+    <button class="btn">上传到预发布</button>
+    <img data-le="testqwer" src="https://errorpage.b0.upaiyun.com/sfault-avatar-404" alt="">
+    <script type="text/javascript" src="js/popup.js"></script>
+</body>
+
+</html>
