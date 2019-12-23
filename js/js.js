@@ -1,5 +1,5 @@
 (function () {
-    window.onload = function (){
+    window.onload = function () {
         const whiteArr = ['src', 'title', 'placeholder', 'class']
         // 消息格式type: open\close\msg
         //注入的 页面接收消息
@@ -67,8 +67,12 @@
                 switch (item.target.nodeType) {
                     case 1:
                         if (item.attributeName === 'src') {
-                            baseObj.value = item.target.currentSrc.replace(/https\/\/|http:\/\//g, '')
+                            console.log('**********')
+                            console.log(item.target.currentSrc)
+                            baseObj.value = item.target.currentSrc.replace(/https:|http:/g, '')
                             baseObj.key = findDataLe(item.target)
+                        } else (item.attributeName === 'style') {
+
                         }
                         ; break;
                     case 2:
