@@ -24,7 +24,7 @@
                 console.log(mutationsList)
                 let keyValArr = formateKeyVal(mutationsList)
                 // 通知插件，做json 更新
-                // sendHashKey(keyValArr)
+                sendHashKey(keyValArr)
             };
             // 创建一个observer示例与回调函数相关联
             var observer = new MutationObserver(callback);
