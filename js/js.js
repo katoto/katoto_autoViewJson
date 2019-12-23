@@ -68,10 +68,11 @@
                     case 1:
                         if (item.attributeName === 'src') {
                             console.log('**********')
-                            console.log(item.target.currentSrc)
-                            baseObj.value = item.target.currentSrc.replace(/https:|http:/g, '')
+                            console.log(item.target.attributes["src"].nodeValue)
+                            console.log(item.target.attributes["src"].nodeValue.replace(/https:|http:/g, ''))
+                            baseObj.value = item.target.attributes["src"].nodeValue.replace(/https:|http:/g, '')
                             baseObj.key = findDataLe(item.target)
-                        } else (item.attributeName === 'style') {
+                        } else if (item.attributeName === 'style') {
 
                         }
                         ; break;
