@@ -9,14 +9,15 @@ let inpStatic = {
         desc: 123,
         list: [{
             index: 1,
-            val: '这是list'
+            val: '这是lis111t'
         },
         {
             index: 1,
-            val: '这是list'
+            val: '这是lis112t'
         }]
     }
 }
+
 setTimeout(() => {
     changeKey2Md5(inpStatic)
 }, 5000)
@@ -39,16 +40,8 @@ function changeKey2Md5(obj = {}) {
     return ''
 }
 
-
 // 引入一个hash 处理函数
-// setInterval(function () {
-//     var pop = chrome.extension.getViews({ type: 'popup' })[0];
-//     if (pop) {
-//         console.log(pop.b);
-//     }
-//     console.log('backgroud 开始执行')
-// }, 1000)
-console.log('11111111111111111')
+
 console.log('11111111111111111')
 // 发送消息
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
@@ -270,19 +263,3 @@ function md5(md5str) {
     }
     return createMD5String(md5str)
 }
-
-
-//发消息
-/*chrome.tabs.query({active:true}, function(tab) {
-    chrome.tabs.sendMessage(tab.id, { greeting: "hello"},
-        function(response) {
-            console.log(response.farewell)
-        });
-}) */
-/*chrome.tabs.query({active:true}, function(tab) {
-    setInterval(function(){
-    console.log(tab.id)
-
-},1000)
-    // chrome.tabs.connect(tab.id, {name: "knockknock"})
-})*/

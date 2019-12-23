@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title></title>
     <script src="js/jquery-1.9.1.min.js"></script>
     <style>
-        body {
-            font-family: "微软雅黑";
-        }
+      body {
+        font-family: "微软雅黑";
+      }
 
-        .btn {
-            margin: 10px;
-            width: 200px;
-            line-height: 35px;
-            background: #3AB2FF;
-            color: #fff;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            outline: none;
-        }
+      .btn {
+        margin: 10px;
+        width: 200px;
+        line-height: 35px;
+        background: #3ab2ff;
+        color: #fff;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+      }
 
-        .btn:active {
-            background: #3AB2aa;
-        }
+      .btn:active {
+        background: #3ab2aa;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div>
-        <h3>下面黏贴静态配置：</h3>
-        <textarea name="staticJson" cols="30" rows="10" id="inpJson"></textarea>
+      <h3>下面黏贴静态配置：</h3>
+      <textarea name="staticJson" cols="30" rows="10" id="inpJson"></textarea>
     </div>
-    <button id="startEdit">确定，开始编辑</button>
-    <button class="btn">更新的json</button><br>
-    <button class="btn">上传到预发布</button>
-    <img data-le="testqwer" src="https://errorpage.b0.upaiyun.com/sfault-avatar-404" alt="">
+    <button class="btn" id="startEdit">手动导入静态配置</button>
+    <button class="btn">更新的json</button><br />
+    <button class="btn" id="outBtn">导出</button>
+    <textarea name="outJson" cols="30" rows="10" id="outJson"></textarea>
+    <img
+      data-le="testqwer"
+      src="https://errorpage.b0.upaiyun.com/sfault-avatar-404"
+      alt=""
+    />
     <script type="text/javascript" src="js/popup.js"></script>
-</body>
-
+  </body>
 </html>

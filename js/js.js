@@ -1,5 +1,5 @@
 (function () {
-    $(document).ready(function () {
+    window.onload = function (){
         const whiteArr = ['src', 'title', 'placeholder', 'class']
         // 消息格式type: open\close\msg
         //注入的 页面接收消息
@@ -88,10 +88,10 @@
                 }
             }
         }
-        setInterval(() => {
-            console.log('send key 123')
-            sendHashKey([{ key: '123', value: 'qwe' }])
-        }, 5000)
+        // setInterval(() => {
+        //     console.log('send key 123')
+        //     sendHashKey([{ key: '123', value: 'qwe' }])
+        // }, 5000)
         /*
         *@method sendHashKey
         * 通知插件
@@ -121,7 +121,8 @@
                 setTimeout(function () { document.body.removeChild(m) }, d * 1000);
             }, duration);
         }
-    });
+    }
+    // 回调的保证
     // if (!state.popTimeInterval) {
     //     state.popTimeInterval = setInterval(function () {
 })();

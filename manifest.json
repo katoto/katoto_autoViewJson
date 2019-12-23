@@ -25,7 +25,6 @@
                 "https://*/*"
             ], //满足什么条件执行该插件 
             "js": [
-                "js/jquery-1.9.1.min.js",
                 "js/js.js"
             ],
             "run_at": "document_start", //在document加载时执行该脚本
